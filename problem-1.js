@@ -32,11 +32,26 @@ for (let i = 0; i <= lastDay; i++) {
 }
 
 /** Problem 04 - (Delete / Store) */
-var fileName = "pdfData.jpg";
+var fileName = "pdfData.padf";
 //write your code here
+var names = fileName[0] === "#";
+var pdf = fileName.includes(".pdf");
+var docx = fileName.includes(".docx");
 
-if (fileName[0] === "#" || fileName === ".pdf" || fileName === ".docx ") {
+if (names || pdf || docx) {
   console.log("Store");
 } else {
   console.log("Delete");
 }
+
+/** Problem 05 - ( PH Email Generator )  */
+var student = { name: "jhanku", roll: 1014, department: "cse" };
+//write your code here
+
+var name = student.name.toLowerCase();
+var roll = student.roll;
+var department = student.department.toLowerCase();
+var code = "@ph.ac.bd";
+
+var total = name + roll + "." + department + code;
+console.log(total);
