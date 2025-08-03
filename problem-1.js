@@ -55,3 +55,16 @@ var code = "@ph.ac.bd";
 
 var total = name + roll + "." + department + code;
 console.log(total);
+
+/** Problem 06 :  (Current Salary )  */
+var experience = 30;
+var startingSalary = 45000;
+//write your code here
+
+var amount = startingSalary;
+
+for (var i = 0; i < experience; i++) {
+  var total = (amount * 5) / 100;
+  amount = amount + total;
+}
+console.log(amount.toFixed(2));
