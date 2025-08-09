@@ -1,14 +1,16 @@
+// /============= Assignment - 3 ===================/;
+
 /** Problem -01 ( Divide the Asset ) */
-var area = 800;
+var area = -15;
 //write your code here
 
 if (area > 0) {
-  const divide = area / 2;
+  var divide = area / 2;
   console.log(divide);
 }
 
 /** Problem -02 ( Cycle or Laptop ) */
-var money = 10000;
+var money = 9999;
 //write your code here
 
 if (money >= 25000) {
@@ -20,23 +22,30 @@ if (money >= 25000) {
 }
 
 /** Problem -03 ( Medicine Planner ) */
-var lastDay = 30;
+var lastDay = 11;
 //write your code here
 
-for (let i = 0; i <= lastDay; i++) {
-  if (i % 3 === 0) {
-    console.log(i + "-medicine");
-  } else {
-    console.log(i + "-rest");
+for (var i = 1; i <= lastDay; i++) {
+  if (i <= 30 ) {
+    if (i % 3 === 0) {
+      console.log(i + " - medicine");
+    } else {
+      console.log(i + " - rest");
+    }
   }
 }
 
 /** Problem 04 - (Delete / Store) */
 var fileName = "pdfData.padf";
 //write your code here
+
 var names = fileName[0] === "#";
-var pdf = fileName.includes(".pdf");
-var docx = fileName.includes(".docx");
+
+var files = fileName.split(".");
+var extension = files[files.length - 1];
+
+var pdf = extension === "pdf";
+var docx = extension === "docx";
 
 if (names || pdf || docx) {
   console.log("Store");
@@ -53,8 +62,8 @@ var roll = student.roll;
 var department = student.department.toLowerCase();
 var code = "@ph.ac.bd";
 
-var total = name + roll + "." + department + code;
-console.log(total);
+var emailGenerator = name + roll + "." + department + code;
+console.log(emailGenerator);
 
 /** Problem 06 :  (Current Salary )  */
 var experience = 30;
@@ -64,7 +73,6 @@ var startingSalary = 45000;
 var amount = startingSalary;
 
 for (var i = 0; i < experience; i++) {
-  var total = (amount * 5) / 100;
-  amount = amount + total;
+  amount = (amount * 5) / 100 + amount;
 }
 console.log(amount.toFixed(2));
